@@ -1,21 +1,54 @@
-/* HARD RESET */
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY — VERY OBVIOUS */
+/* =========================
+   BODY — LIVING BACKGROUND
+========================= */
 body {
-    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
-    background-size: 600% 600%;
-    animation: bgMove 15s ease infinite;
+    font-family: 'Arial', sans-serif;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientFlow 18s ease infinite;
 }
 
-/* HERO — IMPOSSIBLE TO MISS */
+/* FLOATING LIGHT ORBS */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+    z-index: -1;
+}
+
+body::before {
+    background: #ffb347;
+    top: -200px;
+    left: -200px;
+    animation: floatOne 20s infinite alternate;
+}
+
+body::after {
+    background: #7f7cff;
+    bottom: -200px;
+    right: -200px;
+    animation: floatTwo 25s infinite alternate;
+}
+
+/* =========================
+   HERO — GOD TIER
+========================= */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -23,77 +56,5 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
-}
-
-.hero h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    background: linear-gradient(90deg, #ffecd2, #fcb69f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-top: 25px;
-    opacity: 0.9;
-}
-
-/* SECTIONS — NEON CARDS */
-.section {
-    max-width: 900px;
-    margin: 120px auto;
-    padding: 60px;
-    background: rgba(255,255,255,0.08);
-    border: 2px solid rgba(255,255,255,0.2);
-    border-radius: 30px;
-    box-shadow: 0 0 40px rgba(255,255,255,0.15);
-    backdrop-filter: blur(10px);
-    transform: scale(0.98);
-    transition: all 0.4s ease;
-}
-
-.section:hover {
-    transform: scale(1);
-    box-shadow: 0 0 70px rgba(255,255,255,0.3);
-}
-
-/* HEADINGS */
-.section h2 {
-    font-size: 2.8rem;
-    margin-bottom: 25px;
-    color: #ffecd2;
-}
-
-/* TEXT */
-.section p {
-    font-size: 1.2rem;
-    line-height: 2;
-}
-
-/* LIST */
-.memories ul {
-    list-style: none;
-}
-
-.memories li {
-    font-size: 1.1rem;
-    margin-bottom: 18px;
-    padding-left: 20px;
     position: relative;
-}
-
-.memories li::before {
-    content: "✦";
-    position: absolute;
-    left: 0;
-    color: #fcb69f;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 80px 2
+    background: radial-gradient(circle at center, rgba(255,255,255,0.12), transparent 70%);
