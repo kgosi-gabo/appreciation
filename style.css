@@ -1,103 +1,99 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap');
-
-/* Reset */
+/* HARD RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* BODY — VERY OBVIOUS */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #fdfcff, #e9eef8);
-    color: #2b2b2b;
-    line-height: 1.9;
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    background-size: 600% 600%;
+    animation: bgMove 15s ease infinite;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
-/* HERO */
+/* HERO — IMPOSSIBLE TO MISS */
 .hero {
     min-height: 100vh;
-    background:
-        linear-gradient(120deg, rgba(90, 120, 180, 0.9), rgba(180, 200, 230, 0.9)),
-        url('https://images.unsplash.com/photo-1519681393784-d120267933ba') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    padding: 40px 20px;
-    position: relative;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at bottom, rgba(0,0,0,0.2), transparent);
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent);
 }
 
 .hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 4.5rem;
-    z-index: 1;
-    animation: fadeDown 1.5s ease;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    background: linear-gradient(90deg, #ffecd2, #fcb69f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    z-index: 1;
-    opacity: 0.95;
+    font-size: 1.5rem;
+    margin-top: 25px;
+    opacity: 0.9;
 }
 
-/* SECTIONS */
+/* SECTIONS — NEON CARDS */
 .section {
     max-width: 900px;
     margin: 120px auto;
     padding: 60px;
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
-    animation: fadeUp 1.2s ease both;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transform: scale(0.98);
+    transition: all 0.4s ease;
 }
 
+.section:hover {
+    transform: scale(1);
+    box-shadow: 0 0 70px rgba(255,255,255,0.3);
+}
+
+/* HEADINGS */
 .section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     margin-bottom: 25px;
-    color: #344b7c;
-    position: relative;
+    color: #ffecd2;
 }
 
-.section h2::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(to right, #6a85b6, #b9c8e6);
-    display: block;
-    margin-top: 12px;
-    border-radius: 10px;
-}
-
+/* TEXT */
 .section p {
-    font-size: 1.1rem;
-    margin-bottom: 22px;
+    font-size: 1.2rem;
+    line-height: 2;
 }
 
-/* MEMORIES */
+/* LIST */
 .memories ul {
     list-style: none;
 }
 
 .memories li {
-    background: linear-gradient(135deg, #ffffff, #f3f6fb);
-    padding: 22px 28px;
+    font-size: 1.1rem;
     margin-bottom: 18px;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-    position: rela
+    padding-left: 20px;
+    position: relative;
+}
+
+.memories li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: #fcb69f;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 80px 2
