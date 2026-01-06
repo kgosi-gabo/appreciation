@@ -1,5 +1,5 @@
 /* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Canela:wght@500&family=Inter:wght@300;400;500&display=swap');
 
 /* RESET */
 * {
@@ -11,34 +11,9 @@
 /* BODY */
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(180deg, #fff7f0, #f3f8ff);
-    color: #2d2d2d;
+    background: #f9fafc;
+    color: #1f2933;
     line-height: 1.9;
-    overflow-x: hidden;
-}
-
-/* FLOATING SHAPES */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: -1;
-}
-
-body::before {
-    background: #ffd6c9;
-    top: -200px;
-    left: -150px;
-}
-
-body::after {
-    background: #c9dbff;
-    bottom: -200px;
-    right: -150px;
 }
 
 /* OPENING */
@@ -52,111 +27,105 @@ body::after {
 }
 
 .opening-content h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 6rem;
-    color: #3b4a6b;
+    font-family: 'Canela', serif;
+    font-size: 5.5rem;
+    letter-spacing: -1px;
 }
 
 .opening-content h2 {
     font-size: 2rem;
+    font-weight: 300;
     margin-top: 10px;
-    color: #6b7aa6;
+    color: #475569;
 }
 
 .opening-content p {
     margin-top: 30px;
-    font-size: 1.2rem;
-    max-width: 700px;
+    font-size: 1.15rem;
+    max-width: 650px;
     margin-inline: auto;
+    color: #64748b;
 }
 
-/* SPLIT STORY */
+/* SPLIT */
 .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 70vh;
+    min-height: 60vh;
 }
 
 .left {
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ffd6c9, #ffe8dd);
+    justify-content: center;
+    background: #e8eefc;
 }
 
 .left h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 4rem;
-    color: #5a3e36;
+    font-family: 'Canela', serif;
+    font-size: 3.5rem;
 }
 
 .right {
-    padding: 90px;
-    background: white;
+    padding: 80px;
 }
 
 .right p {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     margin-bottom: 25px;
 }
 
-/* IMPACT QUOTE */
+/* QUOTE */
 .impact {
     padding: 120px 40px;
     text-align: center;
-    background: linear-gradient(180deg, #ffffff, #f6f1ec);
+    background: white;
 }
 
 .impact p {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.4rem;
-    color: #3b4a6b;
+    font-family: 'Canela', serif;
+    font-size: 2.2rem;
 }
 
 .impact span {
     display: block;
     margin-top: 20px;
-    color: #777;
+    color: #64748b;
 }
 
 /* MEMORIES */
 .memories {
     display: flex;
-    gap: 40px;
     justify-content: center;
+    gap: 40px;
     padding: 100px 40px;
 }
 
 .memory {
-    width: 280px;
-    padding: 40px;
+    width: 260px;
+    padding: 35px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    font-size: 1.15rem;
     background: white;
-    border-radius: 30px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.08);
-    font-size: 1.2rem;
-    transition: transform 0.4s ease;
 }
 
-.memory:hover {
-    transform: translateY(-12px);
-}
-
-/* FINAL LETTER */
+/* FINAL */
 .final {
     padding: 140px 40px;
     text-align: center;
-    background: linear-gradient(135deg, #c9dbff, #e8f0ff);
+    background: #eef2ff;
 }
 
 .final h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
+    font-family: 'Canela', serif;
+    font-size: 2.8rem;
     margin-bottom: 30px;
 }
 
 .final p {
     font-size: 1.4rem;
-    max-width: 800px;
+    max-width: 750px;
     margin-inline: auto;
 }
 
@@ -164,8 +133,7 @@ body::after {
 footer {
     padding: 60px;
     text-align: center;
-    font-size: 1.1rem;
-    color: #555;
+    color: #64748b;
 }
 
 /* MOBILE */
@@ -179,7 +147,7 @@ footer {
     }
 
     .opening-content h1 {
-        font-size: 4rem;
+        font-size: 3.8rem;
     }
 
     .memories {
