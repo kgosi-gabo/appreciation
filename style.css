@@ -1,0 +1,100 @@
+/* Import Custom Fonts */
+@import url ('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    marigin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f7f9fc, #e6ecf5);
+    color: #2c2c2c;
+    linear-height: 1.8;
+}
+
+/* Hero Section */
+.hero {
+    background: Linear-gradient(135deg, #6a85b6, #bac8e0);
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.hero h1 {
+    font-famiy: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+
+}
+
+/* Sections */
+.section {
+    max-width: 800px;
+    margn: 70px auto;
+    padding: 0 20px;
+} 
+
+.section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 22px;
+    color: #3a4f7a;
+}
+
+.section p {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+/* Memories List */
+.memories ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.memories li {
+    background: white; 
+    margin-bottom: 14px;
+    padding: 18px 22px;
+    border-left: 6px solid #6a85b6;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    font-size: 1rem;
+}
+
+/* Gratitude Section */
+.gratitude {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25ox rgba(0,0,0,0.08);
+
+}
+
+/* Letter Section */
+.letter {
+    background: linear-gradient(135deg, #eef2f7, #ffffff);
+    padding: 45px 35px;
+    border-radius: 12px;
+    border: 1px solid #dde3ec;
+
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
