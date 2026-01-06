@@ -1,60 +1,175 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY — LIVING BACKGROUND
-========================= */
+/* BODY */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial Black', sans-serif;
+    background: #0a0a0a;
     color: white;
     overflow-x: hidden;
-    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-    background-size: 400% 400%;
-    animation: gradientFlow 18s ease infinite;
 }
 
-/* FLOATING LIGHT ORBS */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.25;
-    z-index: -1;
+/* OPENING */
+.opening {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at top, #ffffff22, transparent),
+        linear-gradient(135deg, #000000, #111111);
 }
 
-body::before {
-    background: #ffb347;
-    top: -200px;
-    left: -200px;
-    animation: floatOne 20s infinite alternate;
+.opening-content {
+    text-align: center;
+    animation: zoomIn 1.5s ease;
 }
 
-body::after {
-    background: #7f7cff;
-    bottom: -200px;
-    right: -200px;
-    animation: floatTwo 25s infinite alternate;
+.opening h1 {
+    font-size: 8rem;
+    letter-spacing: 12px;
+    color: #ffffff;
 }
 
-/* =========================
-   HERO — GOD TIER
-========================= */
-.hero {
-    min-height: 100vh;
+.opening h2 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: #bbbbbb;
+}
+
+.opening p {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* SPLIT SECTION */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 70vh;
+}
+
+.left {
+    background: #ffffff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left h3 {
+    font-size: 4rem;
+    transform: rotate(-90deg);
+}
+
+.right {
+    padding: 80px;
+    font-size: 1.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 25px;
+}
+
+/* IMPACT QUOTE */
+.impact {
+    padding: 120px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, #111, #000);
+}
+
+.impact p {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.impact span {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* MEMORIES */
+.memories {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 40px;
+    background: #0f0f0f;
+}
+
+.memory {
+    width: 280px;
+    height: 280px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.12), transparent 70%);
+    font-size: 1.3rem;
+    transition: all 0.4s ease;
+}
+
+.memory:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* FINAL */
+.final {
+    padding: 150px 40px;
+    text-align: center;
+    background: #ffffff;
+    color: black;
+}
+
+.final h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.final p {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+/* FOOTER */
+footer {
+    padding: 60px;
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.6;
+}
+
+/* ANIMATION */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .split {
+        grid-template-columns: 1fr;
+    }
+
+    .left h3 {
+        transform: none;
+    }
+
+    .opening h1 {
+        font-size: 4rem;
+    }
+}
